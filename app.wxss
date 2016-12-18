@@ -1,13 +1,79 @@
+/*容器的样式*/
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10rpx;
+    align-items: center;
+    box-sizing: border-box;
+    background: #fefefe;
+    width: 100%;
+}
 
+/*分割线*/
+.cell_line {
+    height: 2px;
+    background: #c1c1c1;
+    width: 100%;
+}
 
+/*用户的顶部的样式*/
+.celll_user_info {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
 
+/* 这个是头像*/
+.user_avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.user_name_time {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.user_name {
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 14px;
+    color: rebeccapurple;
+}   
+
+.user_time {
+    padding-top: 3px;
+    font-size: 9px;
+    line-height: 9px;
+}
+
+.cell_content {
+    font-size: 14px;
+}
+
+.cell_interact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4px;
+    padding: 8px 5px 5px  5px;
+}
 
 .small_icon {
     width: 40rpx;
     height: 40rpx;
 }
-/*评论的icon */
-.comment_icon {
-    src: 'images/comment.png';
-    
+
+.cell_support,.cell_unsupport,.cell_comment,.cell_share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.small_text {
+    font-size: 40rpx;
+    margin-left: 10rpx;
+    color: #444;
 }

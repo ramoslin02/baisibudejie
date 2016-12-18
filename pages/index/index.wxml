@@ -1,32 +1,35 @@
 <view class="container">
-    <block wx:for="lists"> 
-        <view class="cell_line"></view>
-        <view class="celll_user_info">
-            <image class="user_avatar" src="src" mode="aspectFill"></image>
-            <view class="">
-                <view class="user_name"></view>
-                <view class="user_time"></view>
+    <scroll-view>
+        <block wx:for="{{lists}}"> 
+            <view class="cell_line"></view>
+            <view class="celll_user_info">
+                <image class="user_avatar" src="{{item.profile_image}}" mode="aspectFill"></image>
+                <view class="user_name_time">
+                    <view class="user_name">{{item.name}}</view>
+                    <view class="user_time">{{item.passtime}}</view>
+                </view>
             </view>
-        </view>
-        <view class="cell_content">
-        </view>
-        <view class="cell_interact">
-            <view class="cell_support"> 
-                <image class="support_icon" src="src" ></image>
-                <view class="support_number"></view>
+            <view class="cell_content">
+            {{item.text}}
             </view>
-            <view class="cell_unsupport"> 
-                <image class="unsupport_icon" src="src" ></image>
-                <view class="unsupport_number"></view>
+            <view class="cell_interact">
+                <view class="cell_support"> 
+                    <image class="support_icon small_icon" src="../../images/zan.png" ></image>
+                    <view class="small_text">{{item.love}}</view>
+                </view>
+                <view class="cell_unsupport"> 
+                    <image class="unsupport_icon small_icon" src="../../images/unzan.png" ></image>
+                    <view class="small_text">{{item.hate}}</view>
+                </view>
+                <view class="cell_share"> 
+                    <image class="share_icon small_icon" src="../../images/share.png" ></image>
+                    <view class="small_text">{{item.favourite}}</view>
+                </view>
+                <view class="cell_comment"> 
+                    <image class="comment_icon small_icon"  src="../../images/comment.png"></image>
+                    <view class="small_text">{{item.comment}}</view>
+                </view>
             </view>
-            <view class="cell_share"> 
-                <image class="share" src="src" ></image>
-                <view class="share_number"></view>
-            </view>
-            <view class="cell_comment"> 
-                <image class="comment_icon" src="" ></image>
-                <view class="comment_number"></view>
-            </view>
-        </view>
-    </block>
-</view>
+        </block>
+    </scroll-view>
+</view> 

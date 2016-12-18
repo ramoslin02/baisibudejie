@@ -1,0 +1,13 @@
+
+
+
+
+.small_icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+/*评论的icon */
+.comment_icon {
+    src: 'images/comment.png';
+    
+}

@@ -1,2 +1,32 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+    <block wx:for="lists"> 
+        <view class="cell_line"></view>
+        <view class="celll_user_info">
+            <image class="user_avatar" src="src" mode="aspectFill"></image>
+            <view class="">
+                <view class="user_name"></view>
+                <view class="user_time"></view>
+            </view>
+        </view>
+        <view class="cell_content">
+        </view>
+        <view class="cell_interact">
+            <view class="cell_support"> 
+                <image class="support_icon" src="src" ></image>
+                <view class="support_number"></view>
+            </view>
+            <view class="cell_unsupport"> 
+                <image class="unsupport_icon" src="src" ></image>
+                <view class="unsupport_number"></view>
+            </view>
+            <view class="cell_share"> 
+                <image class="share" src="src" ></image>
+                <view class="share_number"></view>
+            </view>
+            <view class="cell_comment"> 
+                <image class="comment_icon" src="" ></image>
+                <view class="comment_number"></view>
+            </view>
+        </view>
+    </block>
+</view>

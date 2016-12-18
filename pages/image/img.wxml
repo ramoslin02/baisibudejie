@@ -1,2 +1,44 @@
-<!--pages/image/img.wxml-->
-<text>pages/image/img.wxml</text>
+<view class="container">
+    <scroll-view>
+        <block wx:for="{{lists}}"> 
+            <view class="cell_line"></view>
+            <view class="celll_user_info">
+                <image class="user_avatar" src="{{item.profile_image}}" mode="aspectFill"></image>
+                <view class="user_name_time">
+                    <view class="user_name">{{item.name}}</view>
+                    <view class="user_time">{{item.passtime}}</view>
+                </view>
+            </view>
+            <view class="cell_content">
+            {{item.text}}
+            </view>
+            <!--图片的大图-->
+            <!--这是普通图片-->
+            <view wx:if="{{item.is_gif ==0}}">
+                <image src="{{item.cdn_img}}" mode="aspectFill" style="width:100%;" data-url="{{item.cdn_img}}" data-width="{{item.width}}" data-height="{{item.height}}" bindtap="lookBigPic"></image>
+            </view>
+            <!--这是gif图片-->
+            <view wx:else>
+                 <image class="centerContent" src="{{item.cdn_img}}" style="width:100%;" mode="aspectFit" />
+            </view>
+            <view class="cell_interact">
+                <view class="cell_support"> 
+                    <image class="support_icon small_icon" src="../../images/zan.png" ></image>
+                    <view class="small_text">{{item.love}}</view>
+                </view>
+                <view class="cell_unsupport"> 
+                    <image class="unsupport_icon small_icon" src="../../images/unzan.png" ></image>
+                    <view class="small_text">{{item.hate}}</view>
+                </view>
+                <view class="cell_share"> 
+                    <image class="share_icon small_icon" src="../../images/share.png" ></image>
+                    <view class="small_text">{{item.favourite}}</view>
+                </view>
+                <view class="cell_comment"> 
+                    <image class="comment_icon small_icon"  src="../../images/comment.png"></image>
+                    <view class="small_text">{{item.comment}}</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view> 

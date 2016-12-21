@@ -1,4 +1,5 @@
 # baisibudejie 百思不得姐的项目
+![效果图截图](http://upload-images.jianshu.io/upload_images/814550-b1464a8757380788.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 使用Flex进行布局
      
